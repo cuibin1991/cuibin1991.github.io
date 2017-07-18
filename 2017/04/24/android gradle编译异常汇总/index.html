@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/24/android gradle编译异常汇总/index.html">
 <meta property="og:site_name" content="BiuBiu的博客">
 <meta property="og:description" content="对gradle编译异常进行汇总">
-<meta property="og:updated_time" content="2017-07-18T04:55:03.000Z">
+<meta property="og:updated_time" content="2017-07-18T04:58:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android gradle编译异常汇总(持续更新)">
 <meta name="twitter:description" content="对gradle编译异常进行汇总">
@@ -371,7 +371,11 @@
 <p>​    gradle在编译的时候jar包发生冲突。</p>
 <p>解决方案：</p>
 <p>​    例如：app的gradle中包含v4包，module的gradle也包含v4包。这时候可以去除掉app中的v4包，再进行编译。编译前需要clean和rebuild下项目。</p>
-<p><strong>finished with non-zero exit value 3<strong><br>原因：<br>     一般Gradle进行dex的时候可能会遇到内存不够用的情况。这个时候只需要配置dexOptions中的javaMaxHeapSize大小。一般设置成4g即可。<br>解决方案：<br>​     在工程的gradle文件下增加</strong></strong></p>
+<p><strong>finished with non-zero exit value 3<strong></strong></strong></p>
+<p>原因：</p>
+<p>​    一般Gradle进行dex的时候可能会遇到内存不够用的情况。这个时候只需要配置dexOptions中的javaMaxHeapSize大小。一般设置成4g即可。</p>
+<p>解决方案：</p>
+<p>​    在工程的gradle文件下增加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">android.dexOptions &#123;</div><div class="line">    jumboMode = true</div><div class="line">    javaMaxHeapSize &quot;4g&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
