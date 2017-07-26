@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android,移动端" />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -90,16 +90,15 @@
 
 
 
-<meta name="description" content="对gradle编译异常进行汇总">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android gradle编译异常汇总(持续更新)">
-<meta property="og:url" content="http://yoursite.com/2017/07/18/android gradle编译异常汇总/index.html">
+<meta property="og:title" content="test">
+<meta property="og:url" content="http://yoursite.com/2017/07/26/test/index.html">
 <meta property="og:site_name" content="BiuBiu的博客">
-<meta property="og:description" content="对gradle编译异常进行汇总">
-<meta property="og:updated_time" content="2017-07-19T09:22:01.000Z">
+<meta property="og:image" content="http://yoursite.com/2017/07/26/test/001.png">
+<meta property="og:updated_time" content="2017-07-26T07:17:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android gradle编译异常汇总(持续更新)">
-<meta name="twitter:description" content="对gradle编译异常进行汇总">
+<meta name="twitter:title" content="test">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/26/test/001.png">
 
 
 
@@ -127,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/18/android gradle编译异常汇总/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/26/test/"/>
 
 
 
 
 
-  <title>android gradle编译异常汇总(持续更新) | BiuBiu的博客</title>
+  <title>test | BiuBiu的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +251,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/android gradle编译异常汇总/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BiuBiu">
@@ -273,7 +272,7 @@
             
             
               
-                android gradle编译异常汇总(持续更新)
+                test
               
             
           </h1>
@@ -288,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T17:12:42+08:00">
-                2017-07-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T15:16:30+08:00">
+                2017-07-26
               </time>
             
 
@@ -299,39 +298,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -344,10 +310,6 @@
 
           
 
-          
-              <div class="post-description">
-                  对gradle编译异常进行汇总
-              </div>
           
 
         </div>
@@ -360,16 +322,7 @@
       
 
       
-        <p><strong>finished with non-zero exit value 1<strong></strong></strong></p>
-<p>原因：一般是由于工程中代码错误导致gradle的编译错误。        </p>
-<p>​解决方案：如果编译后输出的错误日志指向不明显，可以安装gradle，然后在terminal中输入gradle build –info –stacktrace –debug  编译前需要clean和rebuild下项目。</p>
-<p><strong>finished with non-zero exit value 2<strong></strong></strong></p>
-<p>原因：gradle在编译的时候jar包发生冲突。</p>
-<p>解决方案：例如：app的gradle中包含v4包，module的gradle也包含v4包。这时候可以去除掉app中的v4包，再进行编译。编译前需要clean和rebuild下项目。</p>
-<p><strong>finished with non-zero exit value 3<strong></strong></strong></p>
-<p>原因：一般Gradle进行dex的时候可能会遇到内存不够用的情况。这个时候只需要配置dexOptions中的javaMaxHeapSize大小。一般设置成4g即可。</p>
-<p>解决方案：​在工程的gradle文件下增加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">android.dexOptions &#123;</div><div class="line">    jumboMode = true</div><div class="line">    javaMaxHeapSize &quot;4g&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p><img src="/2017/07/26/test/001.png" alt="001"></p>
 
       
     </div>
@@ -397,14 +350,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Android/" rel="tag"># Android</a>
-          
-            <a href="/tags/gradle/" rel="tag"># gradle</a>
-          
-        </div>
-      
 
       
         
@@ -414,8 +359,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/24/Android打包混淆后JS调用Android方法失效问题/" rel="next" title="Android打包混淆后JS调用Android方法失效问题">
-                <i class="fa fa-chevron-left"></i> Android打包混淆后JS调用Android方法失效问题
+              <a href="/2017/07/25/Kotlin学习笔记(二)入门/" rel="next" title="Kotlin学习笔记(二)入门">
+                <i class="fa fa-chevron-left"></i> Kotlin学习笔记(二)入门
               </a>
             
           </div>
@@ -423,10 +368,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/19/Kotlin学习笔记(一)简介/" rel="prev" title="Kotlin学习笔记(一)简介">
-                Kotlin学习笔记(一)简介 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
