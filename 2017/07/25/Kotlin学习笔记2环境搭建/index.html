@@ -101,7 +101,11 @@
 <meta property="og:image" content="http://yoursite.com/2017/07/25/Kotlin学习笔记2环境搭建/003.png">
 <meta property="og:image" content="http://yoursite.com/2017/07/25/Kotlin学习笔记2环境搭建/004.png">
 <meta property="og:image" content="http://yoursite.com/2017/07/25/Kotlin学习笔记2环境搭建/005.png">
-<meta property="og:updated_time" content="2017-07-26T08:39:06.000Z">
+<meta property="og:image" content="http://yoursite.com/2017/07/25/Kotlin学习笔记2环境搭建/006.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/25/Kotlin学习笔记2环境搭建/007.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/25/Kotlin学习笔记2环境搭建/008.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/25/Kotlin学习笔记2环境搭建/009.png">
+<meta property="og:updated_time" content="2017-07-27T02:07:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin学习笔记2环境搭建">
 <meta name="twitter:description" content="开发者可以通过下载新版本的Android Studio或者在老版本的的Android Studio中安装Kotlin插件来使用Kotlin。Android Studio现阶段最新的版本是3.0，3.0暂时还是预览版但是可以与稳定版并行运行。">
@@ -391,6 +395,15 @@
 <p><img src="/2017/07/25/Kotlin学习笔记2环境搭建/004.png" alt="004"></p>
 <pre><code>下一步后，命名新的Activity和布局文件，默认命名即可，点击Finish创建成功如下图所示：
 </code></pre><p><img src="/2017/07/25/Kotlin学习笔记2环境搭建/005.png" alt="005"></p>
+<p>​    新创建好的Activity依旧是用java编写的，Android Studio有功能可以将当前java代码转化成Kotlin的。通过比较，可以更快的了解和学习Kotlin。通过快捷键Cmd+Shift+A可以搜索转换语句<strong>Convert Java File to Kotlin File<strong>转换前的java代码如下图所示：</strong></strong></p>
+<p><img src="/2017/07/25/Kotlin学习笔记2环境搭建/006.png" alt="006"></p>
+<p>​    转化后的Kotlin代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">package com.example.cuibin.kotlintest</div><div class="line"></div><div class="line">import android.os.Bundle</div><div class="line">import android.support.v7.app.AppCompatActivity</div><div class="line"></div><div class="line">class MainActivity : AppCompatActivity() &#123;</div><div class="line"></div><div class="line">    override fun onCreate(savedInstanceState: Bundle?) &#123;</div><div class="line">        super.onCreate(savedInstanceState)</div><div class="line">        setContentView(R.layout.activity_main)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    转化完成后，可以配置当前工程下的Kotlin的编译和运行版本，步骤：Tools-&gt;Kotlin-&gt;Configure Kotlin in Project</p>
+<p><img src="/2017/07/25/Kotlin学习笔记2环境搭建/007.png" alt="007"></p>
+<p>​    配置完Kotlin后，当前工程的build.gradle需要被更新，因为有新的依赖添加。最后再Sync Project如下图所示：</p>
+<p><img src="/2017/07/25/Kotlin学习笔记2环境搭建/008.png" alt="008"></p>
+<p><img src="/2017/07/25/Kotlin学习笔记2环境搭建/009.png" alt="009"></p>
 
       
     </div>
