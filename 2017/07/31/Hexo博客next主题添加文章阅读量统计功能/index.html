@@ -94,7 +94,7 @@
 ​    我采用的是LeanCloud。LeanCloud的官方网址：https://leancloud.cn/
 ​    1.注册创建应用
 ​    首先进行注册，注册时如果密码过于简单会有提示，但是没有提示密码最低要求。我试了下，数字加大小写字母组合可以完成注册。
-​    注册完成后，访问工作台可以创建一款">
+​    注册完成后，访问工作台创建一款新的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo博客next主题添加文章阅读量统计功能">
 <meta property="og:url" content="http://yoursite.com/2017/07/31/Hexo博客next主题添加文章阅读量统计功能/index.html">
@@ -103,18 +103,18 @@
 ​    我采用的是LeanCloud。LeanCloud的官方网址：https://leancloud.cn/
 ​    1.注册创建应用
 ​    首先进行注册，注册时如果密码过于简单会有提示，但是没有提示密码最低要求。我试了下，数字加大小写字母组合可以完成注册。
-​    注册完成后，访问工作台可以创建一款">
+​    注册完成后，访问工作台创建一款新的">
 <meta property="og:image" content="http://yoursite.com/2017/07/31/Hexo博客next主题添加文章阅读量统计功能/001.png">
 <meta property="og:image" content="http://yoursite.com/2017/07/31/Hexo博客next主题添加文章阅读量统计功能/002.png">
 <meta property="og:image" content="http://yoursite.com/2017/07/31/Hexo博客next主题添加文章阅读量统计功能/003.png">
-<meta property="og:updated_time" content="2017-08-01T02:28:02.000Z">
+<meta property="og:updated_time" content="2017-08-01T04:36:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客next主题添加文章阅读量统计功能">
 <meta name="twitter:description" content="​    关于添加文章阅读量统计功能，大家一般采用不蒜子进行统计，因为植入比较简单。
 ​    我采用的是LeanCloud。LeanCloud的官方网址：https://leancloud.cn/
 ​    1.注册创建应用
 ​    首先进行注册，注册时如果密码过于简单会有提示，但是没有提示密码最低要求。我试了下，数字加大小写字母组合可以完成注册。
-​    注册完成后，访问工作台可以创建一款">
+​    注册完成后，访问工作台创建一款新的">
 <meta name="twitter:image" content="http://yoursite.com/2017/07/31/Hexo博客next主题添加文章阅读量统计功能/001.png">
 
 
@@ -376,14 +376,17 @@
 <p>​    我采用的是LeanCloud。LeanCloud的官方网址：<a href="https://leancloud.cn/" target="_blank" rel="external">https://leancloud.cn/</a></p>
 <p>​    1.注册创建应用</p>
 <p>​    首先进行注册，注册时如果密码过于简单会有提示，但是没有提示密码最低要求。我试了下，数字加大小写字母组合可以完成注册。</p>
-<p>​    注册完成后，访问工作台可以创建一款新的移动应用，如下图所示：</p>
+<p>​    注册完成后，访问工作台创建一款新的移动应用，如下图所示：</p>
 <p><img src="/2017/07/31/Hexo博客next主题添加文章阅读量统计功能/001.png" alt="001"></p>
-<p>​    点击存储，我创建了名为counter的class，如下图所示：</p>
+<p>​    进入新创建好的应用，点击存储，这时需要创建名为Counter的class用来存储访问博客的数据，例如：访问次数，最新访问时间等信息。class类名必须为Counter，主要为了与next主题相兼容，否则无法接收到相关数据。为了避免后续因为权限的问题导致次数统计显示不正常，ACL权限选择无限制，具体配置如下图所示：</p>
 <p><img src="/2017/07/31/Hexo博客next主题添加文章阅读量统计功能/002.png" alt="002"></p>
-<p>​    在所有应用中获取当前新建应用的app_id和app_key，如下图所示：</p>
+<p>​    在所有应用中获取当前新建应用的app_id和app_key，我把我的信息注释掉了，不要误会，如下图所示：</p>
 <p><img src="/2017/07/31/Hexo博客next主题添加文章阅读量统计功能/003.png" alt="003"></p>
-<p>​    修改博客根目录下的_config.yml文件，app_id和app_key是上图获取到的，添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># leancloud</div><div class="line">leancloud_visitors:</div><div class="line">  enable: true</div><div class="line">  app_id: app_id</div><div class="line">  app_key: app_key</div></pre></td></tr></table></figure>
+<p>​    修改博客根目录-&gt;themes-&gt;next-&gt;_config.yml文件，app_id和app_key是上图获取到的，找到如下代码替换app_id和app_key并将enable改为true，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Show number of visitors to each article.</div><div class="line"># You can visit https://leancloud.cn get AppID and AppKey.</div><div class="line">leancloud_visitors:</div><div class="line">  enable: true</div><div class="line">  app_id: #AppID</div><div class="line">  app_key: #AppKey</div></pre></td></tr></table></figure>
+<p>​    配置完成后生成部署hexo博客</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>​    </p>
 
       
     </div>
