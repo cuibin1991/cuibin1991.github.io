@@ -91,24 +91,27 @@
 
 
 <meta name="description" content="finished with non-zero exit value 1
-原因：一般是由于工程中代码错误导致gradle的编译错误。        
-​解决方案：如果编译后输出的错误日志指向不明显，可以安装gradle，然后在terminal中输入gradle build –info –stacktrace –debug  编译前需要clean和rebuild下项目。
-finished with n">
+原因1：一般是由于工程中代码错误导致gradle的编译错误。        
+解决方案：如果编译后输出的错误日志指向不明显，可以安装gradle，然后在terminal中输入gradle build –info –stacktrace –debug  编译前需要clean和rebuild下项目。
+原因2：项目中代码冲突
+解决方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android gradle编译异常汇总(持续更新)">
 <meta property="og:url" content="http://yoursite.com/2017/07/18/android gradle编译异常汇总/index.html">
 <meta property="og:site_name" content="BiuBiu的博客">
 <meta property="og:description" content="finished with non-zero exit value 1
-原因：一般是由于工程中代码错误导致gradle的编译错误。        
-​解决方案：如果编译后输出的错误日志指向不明显，可以安装gradle，然后在terminal中输入gradle build –info –stacktrace –debug  编译前需要clean和rebuild下项目。
-finished with n">
-<meta property="og:updated_time" content="2017-08-01T07:18:06.000Z">
+原因1：一般是由于工程中代码错误导致gradle的编译错误。        
+解决方案：如果编译后输出的错误日志指向不明显，可以安装gradle，然后在terminal中输入gradle build –info –stacktrace –debug  编译前需要clean和rebuild下项目。
+原因2：项目中代码冲突
+解决方">
+<meta property="og:updated_time" content="2017-08-30T01:53:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android gradle编译异常汇总(持续更新)">
 <meta name="twitter:description" content="finished with non-zero exit value 1
-原因：一般是由于工程中代码错误导致gradle的编译错误。        
-​解决方案：如果编译后输出的错误日志指向不明显，可以安装gradle，然后在terminal中输入gradle build –info –stacktrace –debug  编译前需要clean和rebuild下项目。
-finished with n">
+原因1：一般是由于工程中代码错误导致gradle的编译错误。        
+解决方案：如果编译后输出的错误日志指向不明显，可以安装gradle，然后在terminal中输入gradle build –info –stacktrace –debug  编译前需要clean和rebuild下项目。
+原因2：项目中代码冲突
+解决方">
 
 
 
@@ -387,8 +390,10 @@ finished with n">
 
       
         <p><strong>finished with non-zero exit value 1<strong></strong></strong></p>
-<p>原因：一般是由于工程中代码错误导致gradle的编译错误。        </p>
-<p>​解决方案：如果编译后输出的错误日志指向不明显，可以安装gradle，然后在terminal中输入gradle build –info –stacktrace –debug  编译前需要clean和rebuild下项目。</p>
+<p>原因1：一般是由于工程中代码错误导致gradle的编译错误。        </p>
+<p>解决方案：如果编译后输出的错误日志指向不明显，可以安装gradle，然后在terminal中输入gradle build –info –stacktrace –debug  编译前需要clean和rebuild下项目。</p>
+<p>原因2：项目中代码冲突</p>
+<p>解决方案：gradle assemble编译代码并打包时如果有冲突，gradle会输出冲突部分供开发者参考</p>
 <p><strong>finished with non-zero exit value 2<strong></strong></strong></p>
 <p>原因：gradle在编译的时候jar包发生冲突。</p>
 <p>解决方案：例如：app的gradle中包含v4包，module的gradle也包含v4包。这时候可以去除掉app中的v4包，再进行编译。编译前需要clean和rebuild下项目。</p>
@@ -517,7 +522,7 @@ finished with n">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -528,7 +533,7 @@ finished with n">
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
