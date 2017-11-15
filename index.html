@@ -386,8 +386,9 @@
           ListView实现的列表勾选，勾选后进行缓存，下次启动时勾选上次退出时勾选项。
 具体效果如下图所示：
 
-
-          
+在MainActivity中设置listview的监听，点击条目后，缓存当前选中项并进行页面重绘。
+12345@Overridepublic void onItemClick(AdapterVi
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/14/实现listview右侧单选框/#more" rel="contents">

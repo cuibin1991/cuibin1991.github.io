@@ -91,19 +91,28 @@
 
 
 <meta name="description" content="ListView实现的列表勾选，勾选后进行缓存，下次启动时勾选上次退出时勾选项。
-具体效果如下图所示：">
+具体效果如下图所示：
+
+在MainActivity中设置listview的监听，点击条目后，缓存当前选中项并进行页面重绘。
+12345@Overridepublic void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现listview右侧单选框">
 <meta property="og:url" content="http://yoursite.com/2017/11/14/实现listview右侧单选框/index.html">
 <meta property="og:site_name" content="BiuBiu的博客">
 <meta property="og:description" content="ListView实现的列表勾选，勾选后进行缓存，下次启动时勾选上次退出时勾选项。
-具体效果如下图所示：">
+具体效果如下图所示：
+
+在MainActivity中设置listview的监听，点击条目后，缓存当前选中项并进行页面重绘。
+12345@Overridepublic void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long">
 <meta property="og:image" content="http://yoursite.com/2017/11/14/实现listview右侧单选框/001.jpg">
-<meta property="og:updated_time" content="2017-11-15T07:59:31.000Z">
+<meta property="og:updated_time" content="2017-11-15T08:47:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现listview右侧单选框">
 <meta name="twitter:description" content="ListView实现的列表勾选，勾选后进行缓存，下次启动时勾选上次退出时勾选项。
-具体效果如下图所示：">
+具体效果如下图所示：
+
+在MainActivity中设置listview的监听，点击条目后，缓存当前选中项并进行页面重绘。
+12345@Overridepublic void onItemClick(AdapterView&amp;lt;?&amp;gt; parent, View view, int position, long">
 <meta name="twitter:image" content="http://yoursite.com/2017/11/14/实现listview右侧单选框/001.jpg">
 
 
@@ -385,6 +394,14 @@
         <p>ListView实现的列表勾选，勾选后进行缓存，下次启动时勾选上次退出时勾选项。</p>
 <p>具体效果如下图所示：</p>
 <p><img src="/2017/11/14/实现listview右侧单选框/001.jpg" alt="001"></p>
+<p>在MainActivity中设置listview的监听，点击条目后，缓存当前选中项并进行页面重绘。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id) &#123;</div><div class="line">    saveCurrentPosition(position);</div><div class="line">    adapter.notifyDataSetChanged();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>PhoneSettingListAdapter的构造函数，将上下文和需要填充的数据传递过来：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public PhoneSettingListAdapter(Context context, List&lt;String&gt; list) &#123;</div><div class="line">    this.context = context;</div><div class="line">    this.list = list;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>PhoneSettingListAdapter的getView方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public View getView(int position, View convertView, ViewGroup parent) &#123;</div><div class="line">    ViewHolder holder;</div><div class="line">    if (convertView == null) &#123;</div><div class="line">        holder = new ViewHolder();</div><div class="line">        convertView = LayoutInflater.from(context).inflate(R.layout.item_phone_list, null);</div><div class="line">        holder.tv = (TextView) convertView.findViewById(R.id.tv_phone_category);</div><div class="line">        holder.iv = (ImageView) convertView.findViewById(R.id.iv_phone_chosen);</div><div class="line">        convertView.setTag(holder);</div><div class="line">    &#125;else&#123;</div><div class="line">        holder = (ViewHolder) convertView.getTag();</div><div class="line">    &#125;</div><div class="line">    String content = list.get(position);</div><div class="line">    holder.tv.setText(content);</div><div class="line">    //缓存的选中位置</div><div class="line">    int CurrentPosition = Integer.parseInt(getCurrentPosition());</div><div class="line">    //当前位置是选中位置</div><div class="line">    if (CurrentPosition == position) &#123;</div><div class="line">        convertView.setSelected(true);</div><div class="line">        convertView.setPressed(true);</div><div class="line">        holder.iv.setImageResource(R.drawable.ic_single_check);</div><div class="line">    &#125;</div><div class="line">    //当前不是选中位置</div><div class="line">    else &#123;</div><div class="line">        convertView.setSelected(false);</div><div class="line">        convertView.setPressed(false);</div><div class="line">        holder.iv.setImageResource(R.drawable.ic_single_empty);</div><div class="line">    &#125;</div><div class="line">    return convertView;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>activity、adapter中代码和布局文件就不一一贴出来了。</p>
+<p>样例项目上传了github：<a href="https://github.com/cuibin1991/Listview_ChoiceMode" target="_blank" rel="external">https://github.com/cuibin1991/Listview_ChoiceMode</a></p>
 
       
     </div>
