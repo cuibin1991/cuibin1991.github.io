@@ -90,26 +90,17 @@
 
 
 
-<meta name="description" content="一、TensorFlow简介
-​    TensorFlow是谷歌基于DistBelief进行研发的第二代人工智能学习系统，其命名来源于本身的运行原理。Tensor（张量）意味着N维数组，Flow（流）意味着基于数据流图的计算，TensorFlow为张量从流图的一端流动到另一端计算过程。TensorFlow是将复杂的数据结构传输至人工智能神经网中进行分析和处理过程的系统。
-
-​    Tensor">
+<meta name="description" content="TensorFlow简介，Mac下使用pip安装更新TensorFlow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TensorFlow详细安装入门(一)">
 <meta property="og:url" content="http://yoursite.com/2017/11/21/TensorFlow详细安装入门/index.html">
 <meta property="og:site_name" content="BiuBiu的博客">
-<meta property="og:description" content="一、TensorFlow简介
-​    TensorFlow是谷歌基于DistBelief进行研发的第二代人工智能学习系统，其命名来源于本身的运行原理。Tensor（张量）意味着N维数组，Flow（流）意味着基于数据流图的计算，TensorFlow为张量从流图的一端流动到另一端计算过程。TensorFlow是将复杂的数据结构传输至人工智能神经网中进行分析和处理过程的系统。
-
-​    Tensor">
+<meta property="og:description" content="TensorFlow简介，Mac下使用pip安装更新TensorFlow">
 <meta property="og:image" content="http://yoursite.com/2017/11/21/TensorFlow详细安装入门/001.jpg">
-<meta property="og:updated_time" content="2017-11-21T08:17:35.000Z">
+<meta property="og:updated_time" content="2017-11-21T08:40:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFlow详细安装入门(一)">
-<meta name="twitter:description" content="一、TensorFlow简介
-​    TensorFlow是谷歌基于DistBelief进行研发的第二代人工智能学习系统，其命名来源于本身的运行原理。Tensor（张量）意味着N维数组，Flow（流）意味着基于数据流图的计算，TensorFlow为张量从流图的一端流动到另一端计算过程。TensorFlow是将复杂的数据结构传输至人工智能神经网中进行分析和处理过程的系统。
-
-​    Tensor">
+<meta name="twitter:description" content="TensorFlow简介，Mac下使用pip安装更新TensorFlow">
 <meta name="twitter:image" content="http://yoursite.com/2017/11/21/TensorFlow详细安装入门/001.jpg">
 
 
@@ -366,6 +357,10 @@
           
 
           
+              <div class="post-description">
+                  TensorFlow简介，Mac下使用pip安装更新TensorFlow
+              </div>
+          
 
         </div>
       </header>
@@ -392,9 +387,9 @@
 <p>​    我之前安装的是python3自带pip3。如果是python2没有安装pip。</p>
 <p>​    首先要安装pip。安装完成后查看下pip版本，如果版本过低可以升级pip。如果pip版本没有问题，再升级本地six库。具体命令如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//安装pip</div><div class="line">sudo easy_install pip</div><div class="line">//查看pip版本</div><div class="line">pip --version </div><div class="line">//升级pip</div><div class="line">pip install --upgrade pip</div><div class="line">//升级本地six库</div><div class="line">sudo easy_install --upgrade six</div></pre></td></tr></table></figure>
-<p>​    如果当前mac没有root用户，使用sudo命令时会报错，所以要创新root用户。创建完root用户后，再升级本地six库。创建账户命令如下：</p>
+<p>​    如果当前mac没有root用户，使用sudo命令时会报错，所以要创建root用户。创建完root用户后，再升级本地six库。创建账户命令如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//创建root用户</div><div class="line">sudo passwd root </div><div class="line">//创建root用户后，会让输入和确认密码</div><div class="line">bogon:~ cuibin$ sudo passwd root</div><div class="line">Password:</div><div class="line">Changing password for root.</div><div class="line">New password:</div><div class="line">Retype new password:</div></pre></td></tr></table></figure>
-<p>​    安装tensorflow密码如下：</p>
+<p>​    安装tensorflow的命令如下：</p>
 <p>​    sudo pip install –upgrade <a href="https://storage.googleapis.com/tensorflow/mac/tensorflow-0.8.0-py2-none-any.whl" target="_blank" rel="external">https://storage.googleapis.com/tensorflow/mac/tensorflow-0.8.0-py2-none-any.whl</a></p>
 <p>​    TensorFlow更新很快。0.8.0版本太低了点，已经出现了1.4。更新命令如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pip install --upgrade tensorflow</div></pre></td></tr></table></figure>
