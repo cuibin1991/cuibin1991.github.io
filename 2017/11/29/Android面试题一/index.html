@@ -100,7 +100,7 @@ padding约束的是控件或布局显示的内容距离边框的距离，沿垂�
 <meta property="og:description" content="android:padding和android:layout_margin的异同android:paddingpadding 为内边框，指该控件内部内容，如文本/图片距离该控件的边距。
 padding约束的是控件或布局显示的内容距离边框的距离，沿垂直边框向内压缩，padding越大，内容显示控件越小。
 例如，一个元素的width为100px，该元素的左右padding设为10px，则元素内容的宽度">
-<meta property="og:updated_time" content="2017-12-11T03:13:03.000Z">
+<meta property="og:updated_time" content="2017-12-29T07:21:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android面试题一">
 <meta name="twitter:description" content="android:padding和android:layout_margin的异同android:paddingpadding 为内边框，指该控件内部内容，如文本/图片距离该控件的边距。
@@ -394,6 +394,22 @@ padding约束的是控件或布局显示的内容距离边框的距离，沿垂�
 <p>margin&lt;0,一般用于单一方向显示，也就是将该控件与其相邻控件的距离是负值，从显示效果讲就是覆盖某一方向上其它控件。</p>
 <p>总言之，这两个属性是某个控件的属性，控制的只是该控件的显示，表示的意义也不牵扯父控件或其它相邻控件，所以理解时要注意，不要混淆。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.th7.cn/Program/Android/201405/196073.shtml" target="_blank" rel="external">http://www.th7.cn/Program/Android/201405/196073.shtml</a></p>
+<h1 id="setFocusable、setEnabled、setClickable区别"><a href="#setFocusable、setEnabled、setClickable区别" class="headerlink" title="setFocusable、setEnabled、setClickable区别"></a>setFocusable、setEnabled、setClickable区别</h1><h2 id="setEnabled（boolean-bool）"><a href="#setEnabled（boolean-bool）" class="headerlink" title="setEnabled（boolean bool）"></a>setEnabled（boolean bool）</h2><p>用法：设置当前控件是否被激活，是否可用。</p>
+<p>bool为true时，表明该控件被激活，控件处于”活动状态“，能够响应或触发各种事件了，比如触摸、点击、按键等；</p>
+<p>bool为 false 时，则表明该控件没有被激活，控件永远不会”活动“，不管为他设置什么UI 属性，都无效果；</p>
+<p>相关：setEnabled（boolean bool）就相当于View控件的事件总开关，只有总开关打开了，才能使用其他事件。</p>
+<h2 id="setClickable（boolean-bool）"><a href="#setClickable（boolean-bool）" class="headerlink" title="setClickable（boolean bool）"></a>setClickable（boolean bool）</h2><p>用法：设置当前控件是否可被点击。 </p>
+<p>bool为true时，表明控件可以被点击，触发点击事件；</p>
+<p>bool为false时，则表明控件不可被点击，无法触发任何类型的点击事件。</p>
+<p>相关：A.“点击事件”的类型，适用于鼠标、键盘按键、遥控器等；</p>
+<p>B.setOnClickListener（）方法会默认把控件的setClickable（）设置为 true。</p>
+<h2 id="setFocusable（boolean-bool）"><a href="#setFocusable（boolean-bool）" class="headerlink" title="setFocusable（boolean bool）"></a>setFocusable（boolean bool）</h2><p>用法：设置当前控件是否 “可以” 获得焦点。</p>
+<p>bool为true时，表明该控件”可以”获得焦点；</p>
+<p>bool为false时，则表明控件不可以获得焦点。</p>
+<p>相关：A.”可以”获得焦点，就是说具备获得焦点的机会、能力，当有焦点在控件之间移动时，控件就有这个机会、能力得到焦点。但并不是使当前控件立刻获得焦点，要想当前控件立刻获得焦点，需要用View.requestFocus（）方法；</p>
+<p>​    B.当设备为可触摸操作的设备（如手机，平板等）时，setFocusable（boolean bool）方法和setClickable（boolean bool）方法的事件触发，并无直接关联，有无焦点并不影响是否可点击；</p>
+<p>​    C.而当设备为jin不可触摸操作的设备（如智能电视，VR等需要遥控器/手柄操作）时，有无焦点就直接影响点击事件的定位了，需明确。</p>
+<h2 id="参考资料-1"><a href="#参考资料-1" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://blog.csdn.net/mlq8087/article/details/53424142" target="_blank" rel="external">http://blog.csdn.net/mlq8087/article/details/53424142</a></p>
 
       
     </div>
@@ -577,7 +593,7 @@ padding约束的是控件或布局显示的内容距离边框的距离，沿垂�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#android-padding和android-layout-margin的异同"><span class="nav-number">1.</span> <span class="nav-text">android:padding和android:layout_margin的异同</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#android-padding"><span class="nav-number">1.1.</span> <span class="nav-text">android:padding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#android-layout-margin"><span class="nav-number">1.2.</span> <span class="nav-text">android:layout_margin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#差异"><span class="nav-number">1.3.</span> <span class="nav-text">差异</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.4.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#android-padding和android-layout-margin的异同"><span class="nav-number">1.</span> <span class="nav-text">android:padding和android:layout_margin的异同</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#android-padding"><span class="nav-number">1.1.</span> <span class="nav-text">android:padding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#android-layout-margin"><span class="nav-number">1.2.</span> <span class="nav-text">android:layout_margin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#差异"><span class="nav-number">1.3.</span> <span class="nav-text">差异</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.4.</span> <span class="nav-text">参考资料</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setFocusable、setEnabled、setClickable区别"><span class="nav-number">2.</span> <span class="nav-text">setFocusable、setEnabled、setClickable区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#setEnabled（boolean-bool）"><span class="nav-number">2.1.</span> <span class="nav-text">setEnabled（boolean bool）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setClickable（boolean-bool）"><span class="nav-number">2.2.</span> <span class="nav-text">setClickable（boolean bool）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setFocusable（boolean-bool）"><span class="nav-number">2.3.</span> <span class="nav-text">setFocusable（boolean bool）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料-1"><span class="nav-number">2.4.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
             
 
           </div>
