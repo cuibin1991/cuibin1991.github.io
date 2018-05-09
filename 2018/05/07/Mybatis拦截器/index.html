@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Mybatis,Interceptor," />
 
 
 
@@ -90,15 +90,25 @@
 
 
 
-<meta name="description" content="Android小菜鸡的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="BiuBiu的博客">
-<meta property="og:url" content="http://yoursite.com/tags/面试题/index.html">
+<meta name="description" content="MyBatis拦截器介绍MyBatis提供了一种插件(plugin)的功能，虽然叫做插件，但其实这是拦截器功能。
+MyBatis 允许你在已映射语句执行过程中的某一点进行拦截调用。默认情况下，MyBatis 允许使用插件来拦截的方法调用包括：
+
+Executor (update, query, flushStatements, commit, rollback, getTransaction, c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mybatis拦截器">
+<meta property="og:url" content="http://yoursite.com/2018/05/07/Mybatis拦截器/index.html">
 <meta property="og:site_name" content="BiuBiu的博客">
-<meta property="og:description" content="Android小菜鸡的博客">
+<meta property="og:description" content="MyBatis拦截器介绍MyBatis提供了一种插件(plugin)的功能，虽然叫做插件，但其实这是拦截器功能。
+MyBatis 允许你在已映射语句执行过程中的某一点进行拦截调用。默认情况下，MyBatis 允许使用插件来拦截的方法调用包括：
+
+Executor (update, query, flushStatements, commit, rollback, getTransaction, c">
+<meta property="og:updated_time" content="2018-05-07T03:00:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BiuBiu的博客">
-<meta name="twitter:description" content="Android小菜鸡的博客">
+<meta name="twitter:title" content="Mybatis拦截器">
+<meta name="twitter:description" content="MyBatis拦截器介绍MyBatis提供了一种插件(plugin)的功能，虽然叫做插件，但其实这是拦截器功能。
+MyBatis 允许你在已映射语句执行过程中的某一点进行拦截调用。默认情况下，MyBatis 允许使用插件来拦截的方法调用包括：
+
+Executor (update, query, flushStatements, commit, rollback, getTransaction, c">
 
 
 
@@ -126,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/面试题/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/07/Mybatis拦截器/"/>
 
 
 
 
 
-  <title>标签: 面试题 | BiuBiu的博客</title>
+  <title>Mybatis拦截器 | BiuBiu的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -251,46 +261,229 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        面试题
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/Mybatis拦截器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BiuBiu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BiuBiu的博客">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Mybatis拦截器
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-07T09:54:50+08:00">
+                2018-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mybatis/" itemprop="url" rel="index">
+                    <span itemprop="name">Mybatis</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mybatis/Interceptor/" itemprop="url" rel="index">
+                    <span itemprop="name">Interceptor</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/05/07/Mybatis拦截器/" class="leancloud_visitors" data-flag-title="Mybatis拦截器">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h1 id="MyBatis拦截器介绍"><a href="#MyBatis拦截器介绍" class="headerlink" title="MyBatis拦截器介绍"></a>MyBatis拦截器介绍</h1><p>MyBatis提供了一种插件(plugin)的功能，虽然叫做插件，但其实这是拦截器功能。</p>
+<p>MyBatis 允许你在已映射语句执行过程中的某一点进行拦截调用。默认情况下，MyBatis 允许使用插件来拦截的方法调用包括：</p>
+<ol>
+<li>Executor (update, query, flushStatements, commit, rollback, getTransaction, close, isClosed)</li>
+<li>ParameterHandler (getParameterObject, setParameters)</li>
+<li>ResultSetHandler (handleResultSets, handleOutputParameters)</li>
+<li>StatementHandler (prepare, parameterize, batch, update, query)</li>
+</ol>
+<p>我们看到了可以拦截Executor接口的部分方法，比如update，query，commit，rollback等方法，还有其他接口的一些方法等。</p>
+<p>总体概括为：</p>
+<ol>
+<li>拦截执行器的方法</li>
+<li>拦截参数的处理</li>
+<li>拦截结果集的处理</li>
+<li>拦截Sql语法构建的处理</li>
+</ol>
+<h1 id="拦截器的使用"><a href="#拦截器的使用" class="headerlink" title="拦截器的使用"></a>拦截器的使用</h1><h2 id="拦截器介绍及配置"><a href="#拦截器介绍及配置" class="headerlink" title="拦截器介绍及配置"></a>拦截器介绍及配置</h2><p>public interface Interceptor {</p>
+<p>​    Object intercept(Invocation invocation) throws Throwable;</p>
+<p>​    Object plugin(Object target);</p>
+<p>​    void setProperties(Properties properties);</p>
+<p>}</p>
+<p>Interceptor接口提供三个方法：</p>
+<p>​    plugin方法是拦截器用于封装目标对象的，通过该方法我们可以返回目标对象本身，也可以返回一个它的代理。当返回的是代理的时候我们可以对其中的方法进行拦截来调用intercept方法，当然也可以调用其他方法，这点将在后文讲解。setProperties方法是用于在Mybatis配置文件中指定一些属性的。</p>
+<p>　　定义自己的Interceptor最重要的是要实现plugin方法和intercept方法，在plugin方法中我们可以决定是否要进行拦截进而决定要返回一个什么样的目标对象。而intercept方法就是要进行拦截的时候要执行的方法。</p>
+<p>​    对于plugin方法而言，其实Mybatis已经为我们提供了一个实现。Mybatis中有一个叫做Plugin的类，里面有一个静态方法wrap(Object target,Interceptor interceptor)，通过该方法可以决定要返回的对象是目标对象还是对应的代理。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/11/29/Android面试题一/" itemprop="url">
-              
-                <span itemprop="name">Android面试题一</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-29T16:59:24+08:00"
-              content="2017-11-29" >
-          11-29
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mybatis/" rel="tag"># Mybatis</a>
+          
+            <a href="/tags/Interceptor/" rel="tag"># Interceptor</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/04/Mybatis分页插件PageHelper使用/" rel="next" title="Mybatis分页插件PageHelper使用">
+                <i class="fa fa-chevron-left"></i> Mybatis分页插件PageHelper使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/09/Mybatis-select、insert、update/" rel="prev" title="Mybatis-select、insert、update">
+                Mybatis-select、insert、update <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -298,6 +491,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTc4My82MzQ5"></div>
+    
+  </div>
+
 
         </div>
         
@@ -317,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -380,6 +588,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MyBatis拦截器介绍"><span class="nav-number">1.</span> <span class="nav-text">MyBatis拦截器介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拦截器的使用"><span class="nav-number">2.</span> <span class="nav-text">拦截器的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#拦截器介绍及配置"><span class="nav-number">2.1.</span> <span class="nav-text">拦截器介绍及配置</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -493,6 +717,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
@@ -527,6 +755,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
