@@ -91,30 +91,18 @@
 
 
 <meta name="description" content="updateupdate语句：
-&amp;lt;update id=”updateByPrimaryKeySelective” parameterType=”cn.yjt.model.generator.Yjtdevice”
-update yjtdevice    
-&amp;lt;set
-​    &amp;lt;if test=”devsn != null”       
-​        DEVSN = #{dev">
+12345678910111213141516&amp;lt;update id=&amp;quot;updateByPrimaryKeySelective&amp;quot; 			          parameterType=&amp;quot;cn.yjt.model.generator.Yjtdevice&amp;quot;&amp;gt;  update yjtdevice      &amp;lt;set&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mybatis-select、insert、update">
 <meta property="og:url" content="http://yoursite.com/2018/05/09/Mybatis-select、insert、update/index.html">
 <meta property="og:site_name" content="BiuBiu的博客">
 <meta property="og:description" content="updateupdate语句：
-&amp;lt;update id=”updateByPrimaryKeySelective” parameterType=”cn.yjt.model.generator.Yjtdevice”
-update yjtdevice    
-&amp;lt;set
-​    &amp;lt;if test=”devsn != null”       
-​        DEVSN = #{dev">
-<meta property="og:updated_time" content="2018-05-10T06:24:57.000Z">
+12345678910111213141516&amp;lt;update id=&amp;quot;updateByPrimaryKeySelective&amp;quot; 			          parameterType=&amp;quot;cn.yjt.model.generator.Yjtdevice&amp;quot;&amp;gt;  update yjtdevice      &amp;lt;set&amp;">
+<meta property="og:updated_time" content="2018-05-10T06:30:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mybatis-select、insert、update">
 <meta name="twitter:description" content="updateupdate语句：
-&amp;lt;update id=”updateByPrimaryKeySelective” parameterType=”cn.yjt.model.generator.Yjtdevice”
-update yjtdevice    
-&amp;lt;set
-​    &amp;lt;if test=”devsn != null”       
-​        DEVSN = #{dev">
+12345678910111213141516&amp;lt;update id=&amp;quot;updateByPrimaryKeySelective&amp;quot; 			          parameterType=&amp;quot;cn.yjt.model.generator.Yjtdevice&amp;quot;&amp;gt;  update yjtdevice      &amp;lt;set&amp;">
 
 
 
@@ -393,22 +381,7 @@ update yjtdevice
 
       
         <h1 id="update"><a href="#update" class="headerlink" title="update"></a>update</h1><p><strong>update语句：</strong></p>
-<p>&lt;update id=”updateByPrimaryKeySelective” parameterType=”cn.yjt.model.generator.Yjtdevice”</p>
-<p>update yjtdevice    </p>
-<p>&lt;set</p>
-<p>​    &lt;if test=”devsn != null”       </p>
-<p>​        DEVSN = #{devsn,jdbcType=VARCHAR},      </p>
-<p>​    &lt;/if</p>
-<p>​    &lt;if test=”devno != null”      </p>
-<p>​        DEVNO = #{devno,jdbcType=SMALLINT},      </p>
-<p>​    &lt;/if      </p>
-<p>​    &lt;if test=”devname != null”        </p>
-<p>​        DEVNAME = #{devname,jdbcType=VARCHAR},      </p>
-<p>​    &lt;/if      </p>
-<p>​    ……</p>
-<p>&lt;/set    </p>
-<p>where DEVSN = #{devsn,jdbcType=INTEGER}  </p>
-<p>&lt;/update</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;update id=&quot;updateByPrimaryKeySelective&quot; 			          parameterType=&quot;cn.yjt.model.generator.Yjtdevice&quot;&gt;</div><div class="line">  update yjtdevice    </div><div class="line">  &lt;set&gt;   </div><div class="line">	&lt;if test=&quot;devsn != null&quot;&gt;       </div><div class="line">		DEVSN = #&#123;devsn,jdbcType=VARCHAR&#125;,      </div><div class="line">	&lt;/if&gt;      </div><div class="line">	&lt;if test=&quot;devno != null&quot;&gt;        </div><div class="line">		DEVNO = #&#123;devno,jdbcType=SMALLINT&#125;,      </div><div class="line">	&lt;/if&gt;      </div><div class="line">	&lt;if test=&quot;devname != null&quot;&gt;        </div><div class="line">		DEVNAME = #&#123;devname,jdbcType=VARCHAR&#125;,      </div><div class="line">	&lt;/if&gt;      </div><div class="line">	……</div><div class="line">&lt;/set&gt;    </div><div class="line">where DEVSN = #&#123;devsn,jdbcType=INTEGER&#125;  </div><div class="line">&lt;/update&gt;</div></pre></td></tr></table></figure>
 <p><strong>update语句属性配置细节：</strong></p>
 <table>
 <thead>
