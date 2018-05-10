@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Mybatis,sql," />
 
 
 
@@ -90,16 +90,19 @@
 
 
 
-<meta name="description" content="Android小菜鸡的博客">
+<meta name="description" content="updateupdate语句：
+update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​    ​        DEVNO = #{devno,jdbcType=SMALLINT},​    ​    ​        DEVNAME = #{devname,jdbcType=VARCHAR},​    ​">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mybatis-select、insert、update">
 <meta property="og:url" content="http://yoursite.com/2018/05/09/Mybatis-select、insert、update/index.html">
 <meta property="og:site_name" content="BiuBiu的博客">
-<meta property="og:description" content="Android小菜鸡的博客">
-<meta property="og:updated_time" content="2018-05-09T08:40:22.000Z">
+<meta property="og:description" content="updateupdate语句：
+update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​    ​        DEVNO = #{devno,jdbcType=SMALLINT},​    ​    ​        DEVNAME = #{devname,jdbcType=VARCHAR},​    ​">
+<meta property="og:updated_time" content="2018-05-10T02:35:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mybatis-select、insert、update">
-<meta name="twitter:description" content="Android小菜鸡的博客">
+<meta name="twitter:description" content="updateupdate语句：
+update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​    ​        DEVNO = #{devno,jdbcType=SMALLINT},​    ​    ​        DEVNAME = #{devname,jdbcType=VARCHAR},​    ​">
 
 
 
@@ -309,6 +312,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mybatis/" itemprop="url" rel="index">
+                    <span itemprop="name">Mybatis</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mybatis/sql/" itemprop="url" rel="index">
+                    <span itemprop="name">sql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -344,7 +380,68 @@
       
 
       
-        
+        <h1 id="update"><a href="#update" class="headerlink" title="update"></a>update</h1><p><strong>update语句：</strong></p>
+<update id="updateByPrimaryKeySelective" parametertype="cn.yjt.model.generator.Yjtdevice"><br><br>update yjtdevice<br><br><set><br><br>​    <if test="devsn != null"><br><br>​        DEVSN = #{devsn,jdbcType=VARCHAR},<br><br>​    </if><br><br>​    <if test="devno != null"><br><br>​        DEVNO = #{devno,jdbcType=SMALLINT},<br><br>​    </if><br><br>​    <if test="devname != null"><br><br>​        DEVNAME = #{devname,jdbcType=VARCHAR},<br><br>​    </if><br><br>​    ……<br><br></set><br><br>where DEVSN = #{devsn,jdbcType=INTEGER}<br><br></update>
+
+<p><strong>update语句属性配置细节：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>取值</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>在这个模式下唯一的标识符，可被其它语句引用</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>parameterType</td>
+<td>传给此语句的参数的完整类名或别名</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>flushCache</td>
+<td>如果设为true，则会在每次语句调用的时候就会清空缓存。select 语句默认设为false</td>
+<td>true/false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>useCache</td>
+<td>如果设为true，则语句的结果集将被缓存。select 语句默认设为false</td>
+<td>true/false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>设置驱动器在抛出异常前等待回应的最长时间，默认为不设值，由驱动器自己决定</td>
+<td>正整数</td>
+<td>未设置</td>
+</tr>
+<tr>
+<td>fetchSize</td>
+<td>设置一个值后，驱动器会在结果集数目达到此数值后，激发返回，默认为不设值，由驱动器自己决定</td>
+<td>正整数</td>
+<td>驱动器决定</td>
+</tr>
+<tr>
+<td>statementType</td>
+<td>statement、preparedstatement、callablestatement。预准备语句、可调用语句</td>
+<td>STATEMENT、PREPARED、CALLABLE</td>
+<td>PREPARED</td>
+</tr>
+</tbody>
+</table>
+<p>​    MyBatis 插入空值时，需要指定JdbcType。</p>
+<p>​    在执行SQL时MyBatis会自动通过对象中的属性给SQL中参数赋值，它会自动将Java类型转换成数据库的类型。而一旦传入的是null它就无法准确判断这个类型应该是什么，就有可能将类型转换错误，从而报错。要解决这个问题，需要针对这些可能为空的字段，手动指定其转换时用到的类型。一般情况下，我们没有必要按个字段去识别/判断它是否可以为空，而是将所有的字段都当做可以为空，全部手动设置转换类型。</p>
+<p>参考资料：<a href="https://blog.csdn.net/bear_wr/article/details/52386257" target="_blank" rel="external">https://blog.csdn.net/bear_wr/article/details/52386257</a></p>
+
       
     </div>
 
@@ -370,6 +467,14 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mybatis/" rel="tag"># Mybatis</a>
+          
+            <a href="/tags/sql/" rel="tag"># sql</a>
+          
+        </div>
       
 
       
@@ -437,8 +542,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -464,7 +578,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -475,7 +589,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -500,6 +614,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#update"><span class="nav-number">1.</span> <span class="nav-text">update</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
