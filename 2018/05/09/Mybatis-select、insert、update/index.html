@@ -91,18 +91,42 @@
 
 
 <meta name="description" content="updateupdate语句：
-update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​    ​        DEVNO = #{devno,jdbcType=SMALLINT},​    ​    ​        DEVNAME = #{devname,jdbcType=VARCHAR},​    ​">
+\
+update yjtdevice    
+\   
+​    \       
+​        DEVSN = #{devsn,jdbcType=VARCHAR},      
+​    \      
+​    \        
+​        DEVNO = #{devno,jdbcType=SMALLINT},      
+​    \">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mybatis-select、insert、update">
 <meta property="og:url" content="http://yoursite.com/2018/05/09/Mybatis-select、insert、update/index.html">
 <meta property="og:site_name" content="BiuBiu的博客">
 <meta property="og:description" content="updateupdate语句：
-update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​    ​        DEVNO = #{devno,jdbcType=SMALLINT},​    ​    ​        DEVNAME = #{devname,jdbcType=VARCHAR},​    ​">
-<meta property="og:updated_time" content="2018-05-10T05:51:52.000Z">
+\
+update yjtdevice    
+\   
+​    \       
+​        DEVSN = #{devsn,jdbcType=VARCHAR},      
+​    \      
+​    \        
+​        DEVNO = #{devno,jdbcType=SMALLINT},      
+​    \">
+<meta property="og:updated_time" content="2018-05-10T05:58:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mybatis-select、insert、update">
 <meta name="twitter:description" content="updateupdate语句：
-update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​    ​        DEVNO = #{devno,jdbcType=SMALLINT},​    ​    ​        DEVNAME = #{devname,jdbcType=VARCHAR},​    ​">
+\
+update yjtdevice    
+\   
+​    \       
+​        DEVSN = #{devsn,jdbcType=VARCHAR},      
+​    \      
+​    \        
+​        DEVNO = #{devno,jdbcType=SMALLINT},      
+​    \">
 
 
 
@@ -381,8 +405,22 @@ update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​  
 
       
         <h1 id="update"><a href="#update" class="headerlink" title="update"></a>update</h1><p><strong>update语句：</strong></p>
-<update id="updateByPrimaryKeySelective" parametertype="cn.yjt.model.generator.Yjtdevice"><br>update yjtdevice<br><set><br>​    <if test="devsn != null"><br>​        DEVSN = #{devsn,jdbcType=VARCHAR},<br>​    </if><br>​    <if test="devno != null"><br>​        DEVNO = #{devno,jdbcType=SMALLINT},<br>​    </if><br>​    <if test="devname != null"><br>​        DEVNAME = #{devname,jdbcType=VARCHAR},<br>​    </if><br>​    ……<br></set><br>where DEVSN = #{devsn,jdbcType=INTEGER}<br></update>
-
+<p>\<update id="updateByPrimaryKeySelective" parametertype="cn.yjt.model.generator.Yjtdevice"></update></p>
+<p>update yjtdevice    </p>
+<p>\<set>   </set></p>
+<p>​    \<if test="devsn != null">       </if></p>
+<p>​        DEVSN = #{devsn,jdbcType=VARCHAR},      </p>
+<p>​    \      </p>
+<p>​    \<if test="devno != null">        </if></p>
+<p>​        DEVNO = #{devno,jdbcType=SMALLINT},      </p>
+<p>​    \      </p>
+<p>​    \<if test="devname != null">        </if></p>
+<p>​        DEVNAME = #{devname,jdbcType=VARCHAR},      </p>
+<p>​    \      </p>
+<p>​    ……</p>
+<p>\    </p>
+<p>where DEVSN = #{devsn,jdbcType=INTEGER}  </p>
+<p>\</p>
 <p><strong>update语句属性配置细节：</strong></p>
 <table>
 <thead>
