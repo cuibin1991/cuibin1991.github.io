@@ -98,7 +98,7 @@ update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​  
 <meta property="og:site_name" content="BiuBiu的博客">
 <meta property="og:description" content="updateupdate语句：
 update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​    ​        DEVNO = #{devno,jdbcType=SMALLINT},​    ​    ​        DEVNAME = #{devname,jdbcType=VARCHAR},​    ​">
-<meta property="og:updated_time" content="2018-05-10T02:35:38.000Z">
+<meta property="og:updated_time" content="2018-05-10T05:51:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mybatis-select、insert、update">
 <meta name="twitter:description" content="updateupdate语句：
@@ -381,7 +381,7 @@ update yjtdevice​    ​        DEVSN = #{devsn,jdbcType=VARCHAR},​    ​  
 
       
         <h1 id="update"><a href="#update" class="headerlink" title="update"></a>update</h1><p><strong>update语句：</strong></p>
-<update id="updateByPrimaryKeySelective" parametertype="cn.yjt.model.generator.Yjtdevice"><br><br>update yjtdevice<br><br><set><br><br>​    <if test="devsn != null"><br><br>​        DEVSN = #{devsn,jdbcType=VARCHAR},<br><br>​    </if><br><br>​    <if test="devno != null"><br><br>​        DEVNO = #{devno,jdbcType=SMALLINT},<br><br>​    </if><br><br>​    <if test="devname != null"><br><br>​        DEVNAME = #{devname,jdbcType=VARCHAR},<br><br>​    </if><br><br>​    ……<br><br></set><br><br>where DEVSN = #{devsn,jdbcType=INTEGER}<br><br></update>
+<update id="updateByPrimaryKeySelective" parametertype="cn.yjt.model.generator.Yjtdevice"><br>update yjtdevice<br><set><br>​    <if test="devsn != null"><br>​        DEVSN = #{devsn,jdbcType=VARCHAR},<br>​    </if><br>​    <if test="devno != null"><br>​        DEVNO = #{devno,jdbcType=SMALLINT},<br>​    </if><br>​    <if test="devname != null"><br>​        DEVNAME = #{devname,jdbcType=VARCHAR},<br>​    </if><br>​    ……<br></set><br>where DEVSN = #{devsn,jdbcType=INTEGER}<br></update>
 
 <p><strong>update语句属性配置细节：</strong></p>
 <table>
