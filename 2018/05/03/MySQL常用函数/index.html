@@ -100,7 +100,7 @@ FRAC_SE">
 <meta property="og:description" content="TIMESTAMPDIFF和TIMESTAMPADD函数TIMESTAMPDIFF语法：TIMESTAMPDIFF(interval,datetime_expr1,datetime_expr2)。
 说明： 返回日期或日期时间表达式datetime_expr1 和datetime_expr2the 之间的整数差。其结果的单位由interval 参数给出。该参数必须是以下值的其中一个：
 FRAC_SE">
-<meta property="og:updated_time" content="2018-05-03T10:03:31.000Z">
+<meta property="og:updated_time" content="2018-05-11T01:52:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL常用函数">
 <meta name="twitter:description" content="TIMESTAMPDIFF和TIMESTAMPADD函数TIMESTAMPDIFF语法：TIMESTAMPDIFF(interval,datetime_expr1,datetime_expr2)。
@@ -395,14 +395,26 @@ FRAC_SE">
 <p>QUARTER。季度</p>
 <p>YEAR。年</p>
 <p>示例：select TIMESTAMPDIFF(day,’2012-08-24’,’2012-08-30’); </p>
-<p>select TIMESTAMPDIFF(MINUTE,’2012-08-24 09:00:00’,’2012-08-30 12:00:00’);  </p>
+<p>​        select TIMESTAMPDIFF(MINUTE,’2012-08-24 09:00:00’,’2012-08-30 12:00:00’);  </p>
 <h2 id="TIMESTAMPADD"><a href="#TIMESTAMPADD" class="headerlink" title="TIMESTAMPADD"></a>TIMESTAMPADD</h2><p>语法：TIMESTAMPADD(interval,int_expr,datetime_expr)</p>
 <p>说明：将整型表达式int_expr 添加到日期或日期时间表达式 datetime_expr中。式中的interval和上文中列举的取值是一样的。</p>
 <p>示例：select TIMESTAMPADD(MINUTE,8820,’2012-08-24 09:00:00’);</p>
 <h1 id="IFNULL"><a href="#IFNULL" class="headerlink" title="IFNULL"></a>IFNULL</h1><p>语法：IFNULL(expr1,expr2)</p>
 <p>说明：如果 expr1 不是 NULL，IFNULL() 返回 expr1，否则它返回 expr2。 IFNULL()返回一个数字或字符串值，取决于它被使用的上下文环境。</p>
 <p>示例：SELECT IFNULL(1,0);</p>
-<p>SELECT IFNULL(1/0,’sample’);</p>
+<p>​        SELECT IFNULL(1/0,’sample’);</p>
+<h1 id="MySQL中CONCAT函数"><a href="#MySQL中CONCAT函数" class="headerlink" title="MySQL中CONCAT函数"></a>MySQL中CONCAT函数</h1><h2 id="CONCAT"><a href="#CONCAT" class="headerlink" title="CONCAT"></a>CONCAT</h2><p>语法：CONCAT(str1,str2,…)</p>
+<p>说明：返回结果为连接参数产生的字符串。如有任何一个参数为NULL ，则返回值为 NULL。</p>
+<p>示例：select concat(‘11’,’22’,’33’);</p>
+<p>​        select concat(‘11’,’22’,null);</p>
+<h2 id="CONCAT-WS"><a href="#CONCAT-WS" class="headerlink" title="CONCAT_WS"></a>CONCAT_WS</h2><p>语法：CONCAT_WS(separator,str1,str2,…)</p>
+<p>说明：CONCAT_WS() 代表 CONCAT With Separator ，是CONCAT()的特殊形式。第一个参数是其它参数的分隔符。分隔符的位置放在要连接的两个字符串之间。分隔符可以是一个字符串，也可以是其它参数。‘</p>
+<p>注意：如果分隔符为 NULL，则结果为 NULL。函数会忽略任何分隔符参数后的 NULL 值。</p>
+<p>​       和MySQL中concat函数不同的是, concat_ws函数在执行的时候,不会因为NULL值而返回NULL </p>
+<p>示例：select concat_ws(‘,’,’11’,’22’,’33’);</p>
+<p>​        select concat_ws(‘,’,’11’,’22’,NULL);</p>
+<h2 id="GROUP-CONCAT"><a href="#GROUP-CONCAT" class="headerlink" title="GROUP_CONCAT"></a><strong>GROUP_CONCAT</strong></h2><p>语法：group_concat([DISTINCT] 要连接的字段 [Order BY ASC/DESC 排序字段][Separator ‘分隔符’])</p>
+<p>参考资料：<a href="http://zac110.iteye.com/blog/1582382" target="_blank" rel="external">http://zac110.iteye.com/blog/1582382</a></p>
 
       
     </div>
@@ -590,7 +602,7 @@ FRAC_SE">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TIMESTAMPDIFF和TIMESTAMPADD函数"><span class="nav-number">1.</span> <span class="nav-text">TIMESTAMPDIFF和TIMESTAMPADD函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TIMESTAMPDIFF"><span class="nav-number">1.1.</span> <span class="nav-text">TIMESTAMPDIFF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TIMESTAMPADD"><span class="nav-number">1.2.</span> <span class="nav-text">TIMESTAMPADD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IFNULL"><span class="nav-number">2.</span> <span class="nav-text">IFNULL</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TIMESTAMPDIFF和TIMESTAMPADD函数"><span class="nav-number">1.</span> <span class="nav-text">TIMESTAMPDIFF和TIMESTAMPADD函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TIMESTAMPDIFF"><span class="nav-number">1.1.</span> <span class="nav-text">TIMESTAMPDIFF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TIMESTAMPADD"><span class="nav-number">1.2.</span> <span class="nav-text">TIMESTAMPADD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IFNULL"><span class="nav-number">2.</span> <span class="nav-text">IFNULL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL中CONCAT函数"><span class="nav-number">3.</span> <span class="nav-text">MySQL中CONCAT函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CONCAT"><span class="nav-number">3.1.</span> <span class="nav-text">CONCAT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CONCAT-WS"><span class="nav-number">3.2.</span> <span class="nav-text">CONCAT_WS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GROUP-CONCAT"><span class="nav-number">3.3.</span> <span class="nav-text">GROUP_CONCAT</span></a></li></ol></li></ol></div>
             
 
           </div>
