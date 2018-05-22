@@ -100,7 +100,7 @@ FRAC_SE">
 <meta property="og:description" content="TIMESTAMPDIFF和TIMESTAMPADD函数TIMESTAMPDIFF语法：TIMESTAMPDIFF(interval,datetime_expr1,datetime_expr2)。
 说明： 返回日期或日期时间表达式datetime_expr1 和datetime_expr2the 之间的整数差。其结果的单位由interval 参数给出。该参数必须是以下值的其中一个：
 FRAC_SE">
-<meta property="og:updated_time" content="2018-05-11T01:52:14.000Z">
+<meta property="og:updated_time" content="2018-05-22T06:00:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL常用函数">
 <meta name="twitter:description" content="TIMESTAMPDIFF和TIMESTAMPADD函数TIMESTAMPDIFF语法：TIMESTAMPDIFF(interval,datetime_expr1,datetime_expr2)。
@@ -414,7 +414,19 @@ FRAC_SE">
 <p>示例：select concat_ws(‘,’,’11’,’22’,’33’);</p>
 <p>​        select concat_ws(‘,’,’11’,’22’,NULL);</p>
 <h2 id="GROUP-CONCAT"><a href="#GROUP-CONCAT" class="headerlink" title="GROUP_CONCAT"></a><strong>GROUP_CONCAT</strong></h2><p>语法：group_concat([DISTINCT] 要连接的字段 [Order BY ASC/DESC 排序字段][Separator ‘分隔符’])</p>
+<h1 id="DATE-FORMAT"><a href="#DATE-FORMAT" class="headerlink" title="DATE_FORMAT()"></a>DATE_FORMAT()</h1><p>语法：DATE_FORMAT(date,format)</p>
+<p>说明：DATE_FORMAT() 函数用于以不同的格式显示日期/时间数据。date 参数是合法的日期。format 规定日期/时间的输出格式。</p>
+<p>示例：DATE_FORMAT(NOW(),’%b %d %Y %h:%i %p’)</p>
+<p>​        DATE_FORMAT(NOW(),’%m-%d-%Y’)</p>
+<p>​            DATE_FORMAT(NOW(),’%d %b %y’)</p>
+<p>​            DATE_FORMAT(NOW(),’%d %b %Y %T:%f’)</p>
+<h1 id="INSTR"><a href="#INSTR" class="headerlink" title="INSTR"></a>INSTR</h1><p>语法：INSTR(str,substr)</p>
+<p>说明：INSTR()函数返回字符串中子字符串第一次出现的位置。如果在str中找不到子字符串，则INSTR()函数返回零(0)。</p>
+<p>INSTR函数接受两个参数：str是要搜索的字符串。substr是要搜索的子字符串。</p>
+<p>INSTR()函数不区分大小写。这意味着如果通过小写，大写，标题大小写等，结果总是一样的。</p>
+<p>示例：SELECT INSTR(‘MySQL INSTR’, ‘SQL’);</p>
 <p>参考资料：<a href="http://zac110.iteye.com/blog/1582382" target="_blank" rel="external">http://zac110.iteye.com/blog/1582382</a></p>
+<p>​           <a href="http://www.w3school.com.cn/sql/func_date_format.asp" target="_blank" rel="external">http://www.w3school.com.cn/sql/func_date_format.asp</a></p>
 
       
     </div>
@@ -602,7 +614,7 @@ FRAC_SE">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TIMESTAMPDIFF和TIMESTAMPADD函数"><span class="nav-number">1.</span> <span class="nav-text">TIMESTAMPDIFF和TIMESTAMPADD函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TIMESTAMPDIFF"><span class="nav-number">1.1.</span> <span class="nav-text">TIMESTAMPDIFF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TIMESTAMPADD"><span class="nav-number">1.2.</span> <span class="nav-text">TIMESTAMPADD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IFNULL"><span class="nav-number">2.</span> <span class="nav-text">IFNULL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL中CONCAT函数"><span class="nav-number">3.</span> <span class="nav-text">MySQL中CONCAT函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CONCAT"><span class="nav-number">3.1.</span> <span class="nav-text">CONCAT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CONCAT-WS"><span class="nav-number">3.2.</span> <span class="nav-text">CONCAT_WS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GROUP-CONCAT"><span class="nav-number">3.3.</span> <span class="nav-text">GROUP_CONCAT</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TIMESTAMPDIFF和TIMESTAMPADD函数"><span class="nav-number">1.</span> <span class="nav-text">TIMESTAMPDIFF和TIMESTAMPADD函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TIMESTAMPDIFF"><span class="nav-number">1.1.</span> <span class="nav-text">TIMESTAMPDIFF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TIMESTAMPADD"><span class="nav-number">1.2.</span> <span class="nav-text">TIMESTAMPADD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IFNULL"><span class="nav-number">2.</span> <span class="nav-text">IFNULL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL中CONCAT函数"><span class="nav-number">3.</span> <span class="nav-text">MySQL中CONCAT函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CONCAT"><span class="nav-number">3.1.</span> <span class="nav-text">CONCAT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CONCAT-WS"><span class="nav-number">3.2.</span> <span class="nav-text">CONCAT_WS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GROUP-CONCAT"><span class="nav-number">3.3.</span> <span class="nav-text">GROUP_CONCAT</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DATE-FORMAT"><span class="nav-number">4.</span> <span class="nav-text">DATE_FORMAT()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#INSTR"><span class="nav-number">5.</span> <span class="nav-text">INSTR</span></a></li></ol></div>
             
 
           </div>
